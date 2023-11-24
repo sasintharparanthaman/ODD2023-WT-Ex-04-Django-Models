@@ -15,6 +15,7 @@ Python manage.py startapp myapp
 
 
 Add the models in the admin interface using the code in admin.py
+
 ![Screenshot 2023-11-24 103707](https://github.com/sasintharparanthaman/ODD2023-WT-Ex-04-Django-Models/assets/145743219/dc8d97dd-820a-4067-9666-a16f56e3bd6f)
 
 
