@@ -3,104 +3,50 @@
 To develop a admin users with code
 
 # DESIGN STEPS:
-# STEP 1:
-Create django project and app
 
-# STEP 2:
-create a user_profile models in model .py
+# Step1 : Create django project and app using the following commands:
 
-# STEP 3:
+Django-admin startproject mymodels
+Python manage.py startapp myapp
+
+# Step 2: create a user_profile models in model.py
+
+![Screenshot 2023-11-24 103653](https://github.com/sasintharparanthaman/ODD2023-WT-Ex-04-Django-Models/assets/145743219/441fc9fe-2142-4b3c-a9ee-662b6485dd03)
+
+
 Add the models in the admin interface using the code in admin.py
+![Screenshot 2023-11-24 103707](https://github.com/sasintharparanthaman/ODD2023-WT-Ex-04-Django-Models/assets/145743219/dc8d97dd-820a-4067-9666-a16f56e3bd6f)
 
-# STEP 4:
+
+
 Write the function based view to render the data from the models to the template in view.py
+![Screenshot 2023-11-24 103728](https://github.com/sasintharparanthaman/ODD2023-WT-Ex-04-Django-Models/assets/145743219/341c3119-6283-4528-9ab7-f5886609f0e6)
 
-# STEP 5:
+
 Setup the url path for the templates using urls.py
 
-# STEP 6:
-In settings.py file add the app created. Now do the migrations process to initiate and save the models
+![Screenshot 2023-11-24 103748](https://github.com/sasintharparanthaman/ODD2023-WT-Ex-04-Django-Models/assets/145743219/d3c304d0-5ad2-4d35-a4ed-a5d22e0a8ba2)
 
-# STEP 7:
-Run the program.
 
-# CODE:
-```
-1-models.py
+In settings.py file add the app created.
 
-from django.db import models
+# Step 3: Now do the migrations process to initiate and save the models
 
-from django.contrib.auth.models import User 
+Python mange.py makemigrations
+Python manage.py migrate
+Create a template as user_profiles.html
 
-class UserProfile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    first_name=models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
-    email = models.EmailField()
+![Screenshot 2023-11-24 103801](https://github.com/sasintharparanthaman/ODD2023-WT-Ex-04-Django-Models/assets/145743219/80af8d59-3c97-4a91-93f9-159cd5893de5)
 
-2-admin.py
 
-from django.contrib import admin
+# step 4: Run the program using the command
 
-# Register your models here.
-from.models import UserProfile
+Python manage.py runserver 8000
 
-admin.site.register(UserProfile)
+In the admin/ page you can view the models created
 
-from django.shortcuts import render
-from django.views import View
-from django.contrib.auth.decorators import login_required
+And  in the user_profile template page you can see the profile page of the user.
 
-3-view.py
-
-# Create your views here.
-from .models import UserProfile
-@login_required
-def user_profile(request):
-    user = request .user
-    user_profile = UserProfile.objects.get(user=user)
-    
-
-    context = {
-    'user': user,
-    'user_profile': user_profile,
-    'firstname': user_profile.first_name,
-    'lastname': user_profile.last_name,
-    'email' : user_profile.email,
-    }
-
-    return render(request , 'modelapp/user_profiles.html',context)
-
-4-url.py
-
-from django.contrib import admin
-from django.urls import path 
-from myapp import views
-from myapp.views import user_profile
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('profile/',views.user_profile,name='user_profile'),
-]
-
-5-user_profile.html
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>User Profile</title>
-</head>
-<body>
-    <h1>User Profile</h1>
-    <p><strong>Username:</strong>{{ user.username }}</p>
-    <p><strong>First Name:</strong>{{ firstname }}</p>
-    <p><strong>Last Name:</strong>{{ lastnam e}}</p>
-    <p><strong>Email:</strong>{{ user.email }}</p>
-    <p><strong>Coustom Profile Data:</strong>{{ user_profile.custom_field}}</p>
-    
-</body>
-</html>
-```
 # OUTPUT:
 ![Screenshot 2023-11-24 101203](https://github.com/sasintharparanthaman/ODD2023-WT-Ex-04-Django-Models/assets/145743219/5f3515b9-a380-4e42-9e93-4320ceeae1dc)
 
