@@ -25,6 +25,7 @@ In settings.py file add the app created. Now do the migrations process to initia
 Run the program.
 
 # CODE:
+```
 1-models.py
 
 from django.db import models
@@ -99,7 +100,7 @@ urlpatterns = [
     
 </body>
 </html>
-
+```
 # OUTPUT:
 ![Screenshot 2023-11-24 101203](https://github.com/sasintharparanthaman/ODD2023-WT-Ex-04-Django-Models/assets/145743219/5f3515b9-a380-4e42-9e93-4320ceeae1dc)
 
