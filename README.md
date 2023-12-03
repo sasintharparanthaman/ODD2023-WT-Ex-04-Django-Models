@@ -86,7 +86,8 @@ In settings.py file add the app created.
 # Step 3: Now do the migrations process to initiate and save the models
 Python mange.py makemigrations Python manage.py migrate Create a template as user_profiles.html
 
-![Alt text](<Screenshot 2023-12-03 132349.png>)
+![Screenshot 2023-12-03 132349](https://github.com/sasintharparanthaman/ODD2023-WT-Ex-04-Django-Models/assets/145743219/c12a29cf-68cb-4aaf-bedd-503877dd29dd)
+
 
 # Step 4: Run the program using the command
 Python manage.py runserver 8000
@@ -96,10 +97,9 @@ In the admin/ page you can view the models created
 And in the user_profile template page you can see the profile page of the user.
 
 # OUTPUT:
-![Alt text](<Screenshot 2023-11-24 101203.png>)
+![Screenshot 2023-11-24 101203](https://github.com/sasintharparanthaman/ODD2023-WT-Ex-04-Django-Models/assets/145743219/a1412b5b-2120-4300-992f-5d333df229c6)
+![Screenshot 2023-11-24 105630](https://github.com/sasintharparanthaman/ODD2023-WT-Ex-04-Django-Models/assets/145743219/fd4ce2f2-f848-45b6-abb3-285340a6ef6e)
 
-
-![Alt text](<Screenshot 2023-11-24 105630.png>)
 
 # Result:
 The djando models created successful.
