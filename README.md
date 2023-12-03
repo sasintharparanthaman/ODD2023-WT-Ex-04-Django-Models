@@ -36,8 +36,8 @@ In settings.py file add the app created.
 Python mange.py makemigrations
 Python manage.py migrate
 Create a template as user_profiles.html
+![Screenshot 2023-12-03 132349](https://github.com/sasintharparanthaman/ODD2023-WT-Ex-04-Django-Models/assets/145743219/4eb237bd-a29f-4e32-8c1e-47824dc6da32)
 
-![Screenshot 2023-11-24 103801](https://github.com/sasintharparanthaman/ODD2023-WT-Ex-04-Django-Models/assets/145743219/80af8d59-3c97-4a91-93f9-159cd5893de5)
 
 
 # step 4: Run the program using the command
